@@ -32,9 +32,6 @@ public class Practice {
     return sum;
   }
   
-
-  // Time Complexity:
-  // Space Complexity: 
   // Time Complexity: O(n)
   // Space Complexity: O(u)
   // where n = array.length and u = unique values in array
