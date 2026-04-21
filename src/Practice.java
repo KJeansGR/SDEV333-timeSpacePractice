@@ -33,7 +33,7 @@ public class Practice {
   }
   
 
-  // Time Complexity: 
+  // Time Complexity:
   // Space Complexity: 
   // Remember to define your variables!
   public static <T> Map<T, Integer> countFrequencies(T[] array) {
@@ -55,8 +55,9 @@ public class Practice {
     return evens;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(n)
+  // Space Complexity: o(n)
+  // n = concatVals
   // Remember to define your variables!
   public static List<Integer> concatVals(Map<Integer, List<Integer>> map) {
     List<Integer> result = new ArrayList<>();
@@ -69,8 +70,9 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: o(1)
+  // Space Complexity: o(1)
+  // n =  input char
   // Remember to define your variables!
   public static List<Character> septuple(char c) {
     List<Character> result = new ArrayList<>();
