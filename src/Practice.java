@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 
 public class Practice {
@@ -106,8 +108,9 @@ public class Practice {
     return concat;
   }
 
-  // Time Complexity:
-  // Space Complexity: 
+  // Time Complexity: o(1)
+  // Space Complexity: O(1)
+  // variables do not matter for this problem
   // Remember to define your variables!
   public static int cubic(int n, int a, int b, int c, int d) {
     int result = d;
@@ -136,7 +139,28 @@ public class Practice {
   public static int mostCommonTimeEfficient(int[] nums) {
     // TODO: Complete this method with an implementation that runs
     // in O(n) time. n = nums.length
-    return -1;
+    Map<Integer, Integer> map = new LinkedHashMap<>();
+      for(int n : nums){
+        if(!map.containsKey(n)){
+          map.put(n, 1);
+        }
+        else{
+          map.put(n, map.get(n) +1);
+        }
+      }
+      int curKey = -1;
+      int curMax = Integer.MIN_VALUE;
+
+      for(var v : map.entrySet()){
+        int key = v.getKey();
+        int val = v.getValue();
+        if(val > curMax){
+          curMax = val;
+          curKey = key;
+        }
+      }
+      
+    return curKey;
   }
 
   /**
