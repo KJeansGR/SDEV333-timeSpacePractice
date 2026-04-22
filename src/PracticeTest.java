@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PracticeTest {
   
-  // TODO: Implement tests for Practice.mostCommonTimeEfficient and Practice.mostCommonSpaceEfficient
   @Test
   void testMostCommonTimeEfficient(){
     //a
@@ -15,5 +14,10 @@ public class PracticeTest {
     assertEquals(3, result);
   }
 
-  // Hints: They are static methods, so you will use the full Practice.mostCommonTimeEfficient for method calls
+  @Test
+  void testMostCommonSpaceEfficient() {
+    int[] array = new int[]{5, 6, 1, 5, 99, 1, 5, 42, 1};
+    int result = Practice.mostCommonSpaceEfficient(array);
+    assertEquals(5, result);
+  }
 }
