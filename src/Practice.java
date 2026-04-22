@@ -47,8 +47,9 @@ public class Practice {
   }
   
 
-  // Time Complexity: O(n^2)
-  // Space Complexity: O(n^2)
+  // Time Complexity: O(n^2), because the loop explicitly runs n*n times
+  // Space Complexity: O(n^2), because the number of elements is n*n/2, and since 2 is 
+  // a constant, we drop it
   // Where n is the value of the integer passed in
   // Remember to define your variables!
   public static List<Integer> evensToSquare(int n) {
@@ -86,8 +87,10 @@ public class Practice {
     return result;
   }
 
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(rows*cols)
+  // Space Complexity: O(rows*cols)
+  // Where rows are the number of rows in the 2D char array, and cols are 
+  // the number of columns in that array
   // Remember to define your variables!
   public static char[][] initCharRect(int rows, int cols) {
     return new char[rows][cols];
@@ -95,8 +98,10 @@ public class Practice {
 
   // Assume all strings in strs are of length s
   // Hint: charAt is an O(1) operation in both time and space
-  // Time Complexity:
-  // Space Complexity:
+  // Time Complexity: O(strs.length*str.length())
+  // Space Complexity: O(strs.length*str.length())
+  // Where strs.length is the length of the list, and str.length() 
+  // is the length of the string being checked over
   // Remember to define your variables!
   public static List<Character> concatStrings(List<String> strs) {
     List<Character> concat = new ArrayList<>();
