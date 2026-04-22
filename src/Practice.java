@@ -142,8 +142,6 @@ public class Practice {
    * @return the integer that shows up most commonly
    */
   public static int mostCommonTimeEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(n) time. n = nums.length
     Map<Integer, Integer> map = new LinkedHashMap<>();
       for(int n : nums){
         if(!map.containsKey(n)){
@@ -177,15 +175,31 @@ public class Practice {
    * 
    * Once you finish, WRITE TESTS FOR IT in PracticeTest.java
    * 
-   * Time Complexity: 
-   * Space Complexity: 
+   * Time Complexity: O(nums.length^2)
+   * Space Complexity: O(1)
    * 
    * @param nums An array of integers
    * @return the integer that shows up most commonly
    */
   public static int mostCommonSpaceEfficient(int[] nums) {
-    // TODO: Complete this method with an implementation that runs
-    // in O(1) space.
-    return -1;
+    int mostCommon = nums[0];
+    int bestCount = 0;
+
+    for (var candidate : nums) {
+      int currentCount = 0;
+
+      for (var num : nums) {
+        if (num == candidate) {
+          currentCount++;
+        }
+      }
+
+      if (currentCount > bestCount) {
+        bestCount = currentCount;
+        mostCommon = candidate;
+      }
+    }
+    
+    return mostCommon;
   }
 }
